@@ -1,0 +1,11 @@
+{
+  // dbaeumer.vscode-eslint
+
+  "eslint.format.enable": true,
+  "eslint.probe": ["javascript", "typescript", "html", "markdown"],
+  "eslint.run": "onType",
+  "eslint.options": { "configFile": ".eslintrc.js" },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
