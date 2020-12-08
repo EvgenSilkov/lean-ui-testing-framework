@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ['mocha', 'promise', 'node'],
   ignorePatterns: ['node_modules/*'],
-  globals: {step: 'readonly'},
+  globals: { step: 'readonly' },
   rules: {
     'mocha/no-top-level-hooks': 0,
     'mocha/no-hooks-for-single-case': 0,
@@ -31,13 +31,13 @@ module.exports = {
     ],
   },
   env: {
-    'mocha': true,
+    mocha: true,
   },
   extends: [
     'standard',
     'prettier',
     'plugin:promise/recommended',
     'plugin:node/recommended',
-    'plugin:mocha/recommended'
+    'plugin:mocha/recommended',
   ],
 }

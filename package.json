@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "lean ui test framework",
   "scripts": {
+    "fast": "mocha --require mocha-steps suites/fast/**/**.js",
+    "smoke": "mocha --require mocha-steps suites/smoke/**/*.js",
+    "regression": "mocha --require mocha-steps suites/regression/**/*.js",
     "pre-commit": "lint-staged",
     "lint": "eslint --fix .",
     "format": "prettier-standard '**/*.json' '**/*.js'"
