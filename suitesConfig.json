@@ -2,49 +2,85 @@
   {
     "fileName": "t001_test_example",
     "isActive": true,
-    "suites": ["smoke"],
-    "configVariations": ["banana"]
+    "suites": [
+      "smoke"
+    ],
+    "configVariations": [
+      "banana"
+    ]
   },
   {
     "fileName": "t002_test_example",
     "isActive": true,
-    "suites": ["fast", "regression"],
-    "configVariations": ["orange", "mango"]
+    "suites": [
+      "fast",
+      "regression"
+    ],
+    "configVariations": [
+      "orange",
+      "mango"
+    ]
   },
   {
     "fileName": "t003_test_example",
     "isActive": true,
-    "suites": ["fast"],
-    "configVariations": ["potato"]
+    "suites": [
+      "fast"
+    ],
+    "configVariations": [
+      "potato"
+    ]
   },
   {
     "fileName": "t004_test_example",
     "isActive": true,
-    "suites": ["regression"],
-    "configVariations": ["banana", "mango"]
+    "suites": [
+      "regression"
+    ],
+    "configVariations": [
+      "banana",
+      "mango"
+    ]
   },
   {
     "fileName": "t005_test_example",
     "isActive": false,
-    "suites": ["fast"],
-    "configVariations": ["banana"]
+    "suites": [
+      "fast"
+    ],
+    "configVariations": [
+      "banana"
+    ]
   },
   {
     "fileName": "t006_test_example",
     "isActive": true,
-    "suites": ["regression"],
-    "configVariations": ["banana"]
+    "suites": [
+      "regression"
+    ],
+    "configVariations": [
+      "banana"
+    ]
   },
   {
     "fileName": "t007_test_example",
     "isActive": true,
-    "suites": ["regression"],
-    "configVariations": ["orange"]
+    "suites": [
+      "regression"
+    ],
+    "configVariations": [
+      "orange"
+    ]
   },
   {
     "fileName": "t008_test_example",
     "isActive": true,
-    "suites": ["regression"],
-    "configVariations": ["orange", "mango"]
+    "suites": [
+      "regression"
+    ],
+    "configVariations": [
+      "orange",
+      "mango"
+    ]
   }
 ]
