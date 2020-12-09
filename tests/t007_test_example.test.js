@@ -1,5 +1,5 @@
 const path = require('path')
-const bucket = require('../test_utils/configBucket.js')
+const bucket = require('../test_utils/config_bucket.js')
 const testName = path.basename(__filename)
 
 describe(`${testName} - ${bucket.CURRENT_VARIATION.name}`, function () {

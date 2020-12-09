@@ -1,14 +1,14 @@
-const allConfigVariation = require('../app/config_provider/countryConfig')
+const allConfigVariation = require('../app/config_provider/country_config')
 const path = require('path')
-const suitesConfigPath = './suitesConfig.json'
+const suitesConfigPath = path.resolve(__dirname, './suites_config.json')
 const rreaddir = require('./rreaddir')
 const exists = require('./exists')
 const { writeFile, mkdir } = require('fs').promises
 
 function getFileContent ({ variation, fileName }) {
   return `const path = require('path')
-const bucket = require(path.resolve('test_utils/configBucket.js'))
-const allConfigVariation = require(path.resolve('app/config_provider/countryConfig'))
+const bucket = require(path.resolve('test_utils/config_bucket.js'))
+const allConfigVariation = require(path.resolve('app/config_provider/country_config'))
 bucket.CURRENT_VARIATION = allConfigVariation.${variation}
 require(path.resolve('tests/${fileName}.test.js'))
 `
@@ -29,7 +29,7 @@ async function generateSuites () {
 
   if (emptyRecords.length !== 0) {
     throw new Error(
-      `there are records in SuitesConfig withouth files\n\n${emptyRecords
+      `there are records in suitesConfig withouth files\n\n${emptyRecords
         .map(record => record.fileName)
         .join('\n')}\n\n`,
     )

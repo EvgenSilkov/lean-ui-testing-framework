@@ -2,4 +2,4 @@
 package.json
 node_modules/
 suites
-runner_utils/suitesConfig.json
+runner_utils/suites_config.json
