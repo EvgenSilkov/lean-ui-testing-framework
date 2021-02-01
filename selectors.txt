@@ -1,0 +1,27 @@
+way too generic
+form[data-sb-id="main"] button[type="submit"]
+
+what is the difference between two?
+form[data-sb-id="main"] [data-date-value="X"]
+form[data-sb-id="main"] [data-test="date-value-1-dafd"]
+
+speedy generic
+form[data-sb-id="main"] [data-date]
+
+slower genric
+form[data-sb-id="main"] [data-test^="date-value-"]
+
+find in React procject 'data-test-date-value' or "data-test={'date-value"
+
+<Component data-test={'date-value-' + date}>
+<Component data-test-date-value={date}>
+
+
+
+be afraid of &nbsp; &#8203; U+200B; &ZeroWidthSpace;
+//form[@data-sb-id="main"]//[text()="Île de France"] 
+
+
+
+
+

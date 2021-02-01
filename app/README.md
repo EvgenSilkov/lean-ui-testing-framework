@@ -1,6 +1,6 @@
 # Description of app/ folder
 
-**Nither `app` nor any subfolder should have index.js file, as it would blowing up memory
+**Neither `app` nor any subfolder should have index.js file, as it would blowing up memory
 usage on a smal test's run.**
 
 folder structure:

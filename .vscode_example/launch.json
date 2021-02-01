@@ -14,13 +14,7 @@
       "internalConsoleOptions": "neverOpen",
       "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
       "cwd": "${workspaceFolder}/",
-      "args": [
-        "-t",
-        "40000",
-        "--require",
-        "mocha-steps",
-        "${workspaceFolder}/*.test.js"
-      ]
+      "args": ["-t", "40000", "--require", "mocha-steps", "${workspaceFolder}/*.test.js"]
     },
     {
       "name": "attach",

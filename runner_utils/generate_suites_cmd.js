@@ -15,23 +15,19 @@ require(path.resolve('tests/${fileName}.test.js'))
 }
 
 async function generateSuites () {
-  const suitesConfig = (await exists(suitesConfigPath))
-    ? require(suitesConfigPath)
-    : []
+  const suitesConfig = (await exists(suitesConfigPath)) ? require(suitesConfigPath) : []
 
   const allFiles = await rreaddir(path.resolve(__dirname, '../tests'))
-  const testFiles = allFiles.filter(filepath =>
-    path.basename(filepath).includes('.test.js'),
-  )
+  const testFiles = allFiles.filter(filepath => path.basename(filepath).includes('.test.js'))
   const emptyRecords = suitesConfig.filter(
     test => !testFiles.some(filePath => filePath.includes(test.fileName)),
   )
 
   if (emptyRecords.length !== 0) {
     throw new Error(
-      `there are records in suitesConfig withouth files\n\n${emptyRecords
+      `there are records in suitesConfig withouth files\n${emptyRecords
         .map(record => record.fileName)
-        .join('\n')}\n\n`,
+        .join('\n')}`,
     )
   }
 
@@ -75,11 +71,7 @@ async function generateSuites () {
   await Promise.all(mkdirPromises)
 
   await Promise.all([
-    writeFile(
-      suitesConfigPath,
-      JSON.stringify([...suitesConfig, ...newFiles], null, 2),
-      'utf8',
-    ),
+    writeFile(suitesConfigPath, JSON.stringify([...suitesConfig, ...newFiles], null, 2), 'utf8'),
     ...writeFileData.map(({ filePath, data }) => {
       return writeFile(filePath, data, 'utf8')
     }),

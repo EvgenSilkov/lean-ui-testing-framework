@@ -3,7 +3,9 @@
     "fileName": "t001_test_example",
     "isActive": true,
     "suites": [
-      "smoke"
+      "smoke",
+      "fast",
+      "regression"
     ],
     "configVariations": [
       "banana"

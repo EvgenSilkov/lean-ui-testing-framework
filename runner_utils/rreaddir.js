@@ -12,11 +12,7 @@ const { readdir, stat } = require('fs').promises
 async function rreaddir (dir, allFiles = []) {
   const files = (await readdir(dir)).map(f => join(dir, f))
   allFiles.push(...files)
-  await Promise.all(
-    files.map(
-      async f => (await stat(f)).isDirectory() && rreaddir(f, allFiles),
-    ),
-  )
+  await Promise.all(files.map(async f => (await stat(f)).isDirectory() && rreaddir(f, allFiles)))
   return allFiles
 }
 
